@@ -1,51 +1,42 @@
-Project Template
-================
+.NET Identifier Case
+====================
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kevinoid/node-project-template/node.js.yml?branch=main&style=flat&label=build)](https://github.com/kevinoid/node-project-template/actions?query=branch%3Amain)
-[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/node-project-template/main.svg?style=flat)](https://app.codecov.io/gh/kevinoid/node-project-template/branch/main)
-[![Dependency Status](https://img.shields.io/librariesio/release/npm/@kevinoid/project-template.svg?style=flat)](https://libraries.io/npm/@kevinoid%2Fproject-template)
-[![Supported Node Version](https://img.shields.io/node/v/@kevinoid/project-template.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/project-template)
-[![Version on NPM](https://img.shields.io/npm/v/@kevinoid/project-template.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/project-template)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kevinoid/dotnet-identifier-case/node.js.yml?branch=main&style=flat&label=build)](https://github.com/kevinoid/dotnet-identifier-case/actions?query=branch%3Amain)
+[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/dotnet-identifier-case/main.svg?style=flat)](https://app.codecov.io/gh/kevinoid/dotnet-identifier-case/branch/main)
+[![Dependency Status](https://img.shields.io/librariesio/release/npm/@kevinoid/dotnet-identifier-case.svg?style=flat)](https://libraries.io/npm/@kevinoid%2Fdotnet-identifier-case)
+[![Supported Node Version](https://img.shields.io/node/v/@kevinoid/dotnet-identifier-case.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/dotnet-identifier-case)
+[![Version on NPM](https://img.shields.io/npm/v/@kevinoid/dotnet-identifier-case.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/dotnet-identifier-case)
 
-A Node.js/npm project template with [codecov](https://codecov.io/),
-[coveralls](https://coveralls.io/), [ESLint](https://eslint.org/),
-[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli),
-[c8](https://github.com/bcoe/c8), [JSDoc](http://usejsdoc.org/), and
-[mocha](https://mochajs.org/).
-
-It is the template that I am using for my own Node.js projects, which
-represents my current preferences.  I am not advocating for these choices nor
-this template specifically, although I am happy to discuss or explain any
-choices made herein.  It is being published both for my own convenience and
-in case it may be useful to others with similar tastes.
+Transform a string to PascalCase according to [Microsoft's .NET Capitalization
+Conventions](https://docs.microsoft.com/dotnet/standard/design-guidelines/capitalization-conventions) similarly to [`change-case`](https://www.npmjs.com/package/change-case).
 
 ## Introductory Example
 
 ```js
+import dotnetCase from '@kevinoid/dotnet-identifier-case';
+
+dotnetCase('TEST_VALUE'); //=> "TestValue"
 ```
-
-## Features
-
 
 ## Installation
 
-[This package](https://www.npmjs.com/package/@kevinoid/project-template) can be
+[This package](https://www.npmjs.com/package/@kevinoid/dotnet-identifier-case) can be
 installed using [npm](https://www.npmjs.com/), either globally or locally, by
 running:
 
 ```sh
-npm install @kevinoid/project-template
+npm install @kevinoid/dotnet-identifier-case
 ```
 
 ## Recipes
 
 More examples can be found in the [test
-specifications](https://kevinoid.github.io/project-template/spec).
+specifications](https://kevinoid.github.io/dotnet-identifier-case/spec).
 
 ## API Docs
 
 To use this module as a library, see the [API
-Documentation](https://kevinoid.github.io/project-template/api).
+Documentation](https://kevinoid.github.io/dotnet-identifier-case/api).
 
 ## Contributing
 
@@ -66,7 +57,3 @@ save a lot of time and effort.
 
 This project is available under the terms of the [MIT License](LICENSE.txt).
 See the [summary at TLDRLegal](https://tldrlegal.com/license/mit-license).
-
-The [template](https://github.com/kevinoid/node-project-template) upon which
-this project is based is available under the terms of
-[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
