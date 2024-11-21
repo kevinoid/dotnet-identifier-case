@@ -4,39 +4,31 @@
  */
 
 import assert from 'node:assert/strict';
+import { format } from 'node:util';
 
 import dotnetIdentifierCase from '../index.js';
 
+function itTransforms(from, to) {
+  it(format('transforms %j to %j', from, to), () => {
+    assert.equal(dotnetIdentifierCase(from), to);
+  });
+}
+
 describe('dotnetIdentifierCase', () => {
-  it('returns empty string unchanged', () => {
-    assert.equal(dotnetIdentifierCase(''), '');
-  });
-
-  it('converts undefined to "Undefined"', () => {
-    assert.equal(dotnetIdentifierCase(), 'Undefined');
-  });
-
-  it('converts 1 to "1"', () => {
-    assert.equal(dotnetIdentifierCase(1), '1');
-  });
-
-  it('converts "foo" to "foo"', () => {
-    assert.equal(dotnetIdentifierCase('foo'), 'Foo');
-  });
-
-  it('converts "Foo" to "foo"', () => {
-    assert.equal(dotnetIdentifierCase('Foo'), 'Foo');
-  });
-
-  it('converts "fOo" to "foo"', () => {
-    assert.equal(dotnetIdentifierCase('fOo'), 'FOo');
-  });
-
-  it('converts "FOO" to "foo"', () => {
-    assert.equal(dotnetIdentifierCase('FOO'), 'Foo');
-  });
-
-  it('converts "foo bar" to "FooBar"', () => {
-    assert.equal(dotnetIdentifierCase('foo bar'), 'FooBar');
-  });
+  itTransforms('', '');
+  itTransforms(undefined, 'Undefined');
+  itTransforms(1, '1');
+  itTransforms('foo', 'Foo');
+  itTransforms('Foo', 'Foo');
+  itTransforms('fOo', 'FOo');
+  itTransforms('FOO', 'Foo');
+  itTransforms(' foo ', 'Foo');
+  itTransforms('_foo_', 'Foo');
+  itTransforms('foo bar', 'FooBar');
+  itTransforms('foo_bar', 'FooBar');
+  itTransforms('foo.bar', 'FooBar');
+  itTransforms('foo-bar', 'FooBar');
+  itTransforms('fooBar', 'FooBar');
+  itTransforms("foo's", 'Foos');
+  itTransforms('fooV2', 'FooV2');
 });
