@@ -41,5 +41,8 @@ export default function dotnetIdentifierCase(value) {
       return first.toUpperCase() + rest.toLowerCase();
     })
     // Remove non-alnum characters
-    .replaceAll(/[^\p{L}\p{N}]+/gu, '');
+    // Note: C# identifiers can have [\p{L}\p{Nl}\p{Nd}\p{Pc}\p{Mn}\p{Mc}\p{Cf}]
+    // Stick with [\p{L}\d] for consistency with change-case
+    // https://github.com/blakeembrey/change-case/blob/38e6b4f9115cf93b18ca9b1b4a620a32751499cb/packages/change-case/src/index.ts#L9
+    .replaceAll(/[^\p{L}\d]+/gu, '');
 }
