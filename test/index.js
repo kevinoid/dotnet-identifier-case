@@ -31,4 +31,6 @@ describe('dotnetIdentifierCase', () => {
   itTransforms('fooBar', 'FooBar');
   itTransforms("foo's", 'Foos');
   itTransforms('fooV2', 'FooV2');
+  itTransforms('foo XVII', 'FooXVII');
+  itTransforms('foo IVY', 'FooIvy');
 });
