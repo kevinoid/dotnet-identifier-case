@@ -1,6 +1,6 @@
 {
   "name": "@kevinoid/dotnet-identifier-case",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Transform a string to PascalCase according to Microsoft's .NET Capitalization Conventions.",
   "keywords": [
     "change-case",
