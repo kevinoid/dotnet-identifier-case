@@ -1,7 +1,7 @@
 .NET Identifier Case
 ====================
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kevinoid/dotnet-identifier-case/node.js.yml?branch=main&style=flat&label=build)](https://github.com/kevinoid/dotnet-identifier-case/actions?query=branch%3Amain)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kevinoid/dotnet-identifier-case/node.js.yml?branch=main&style=flat&label=build)](https://github.com/kevinoid/dotnet-identifier-case/actions/workflows/node.js.yml?query=branch%3Amain)
 [![Coverage](https://img.shields.io/codecov/c/github/kevinoid/dotnet-identifier-case/main.svg?style=flat)](https://app.codecov.io/gh/kevinoid/dotnet-identifier-case/branch/main)
 [![Dependency Status](https://img.shields.io/librariesio/release/npm/@kevinoid/dotnet-identifier-case.svg?style=flat)](https://libraries.io/npm/@kevinoid%2Fdotnet-identifier-case)
 [![Supported Node Version](https://img.shields.io/node/v/@kevinoid/dotnet-identifier-case.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/dotnet-identifier-case)
